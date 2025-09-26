@@ -1,0 +1,149 @@
+<nav>
+  <div class="logo">KALVIUM</div>
+  <ul>
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#bio">BIO</a></li>
+    <li><a href="#portfolio">PORTFOLIO</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#contact" class="contact-btn">CONTACT</a></li>
+  </ul>
+</nav>
+<section class="banner">
+  <p>I BELIEVE IN</p>
+  <h1>EAT (); SLEEP (); CODE (); REPEAT ();</h1>
+</section>
+<section id="bio" class="bio-section">
+  <div class="bio-content">
+    <img src=""https://i.postimg.cc/qMh54Zg6/profile_picture.png"" alt="Profile_Photo" class="profile-pic">
+    <div class="bio-text">
+      <h2>Kalvium</h2>
+      <p>
+        I am a passionate Engineer with a degree in Electronics & Communication Engineering.
+        My very first experience with code was at the time when I started my own blog.
+        My struggle to customize the blog pages introduced me to HTML & CSS. Soon, the excitement of having the power to structure pages on my own surfaced among and that's when I decided to pursue web development.
+        <br><br>
+        Recently, I have taken up a Full Stack Development program with FACE. I have knowledge of HTML, CSS and JavaScript, Java, C++ and Data Structures. Rational thought process and goal-oriented planning are my strengths.
+        <br><br>
+        I am currently on the lookout for a challenging role to build products that make a difference.
+      </p>
+      <button class="download-btn">Download My Resume</button>
+    </div>
+  </div>
+</section>
+</section>
+<section id="skills" class="skills-section">
+  <h2>SKILLS</h2>
+  <div class="skills-container">
+    <div>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>HTML <div class="skill-bar html"></div></li>
+        <li>CSS <div class="skill-bar css"></div></li>
+        <li>JAVA <div class="skill-bar java"></div></li>
+        <li>JAVASCRIPT <div class="skill-bar js"></div></li>
+        <li>ANGULAR <div class="skill-bar angular"></div></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Languages</h3>
+      <ul>
+        <li>ENGLISH <div class="skill-bar english"></div></li>
+        <li>KANNADA <div class="skill-bar kannada"></div></li>
+        <li>HINDI <div class="skill-bar hindi"></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="portfolio" class="portfolio-section">
+  <h2>PORTFOLIO</h2>
+  <p>Some of my best projects so far</p>
+  <div class="portfolio-cards">
+    <div class="card">
+      <h3>PERSONAL BLOG</h3>
+      <p>A blog where I pen my own thoughts on programming</p>
+    </div>
+    <div class="card">
+      <h3>TIC TAC TOE</h3>
+      <p>Complete Tic Tac Toe game along with GUI using Java</p>
+    </div>
+    <div class="card">
+      <h3>TIME TABLE GENERATOR</h3>
+      <p>A web application for automatic time table generation</p>
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact-section">
+  <h2>CONTACT</h2>
+  <form>
+    <input type="text" placeholder="ENTER YOUR NAME">
+    <input type="email" placeholder="ENTER YOUR EMAIL">
+    <input type="text" placeholder="ENTER YOUR MESSAGE">
+    <button type="submit">Send My Message</button>
+  </form>
+</section>
+#CSS_CODE#
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  box-shadow: 0 2px 8px #0001;
+}
+.logo { color: #f55; font-weight: bold; }
+nav ul { display: flex; gap: 25px; list-style: none; }
+nav a { color: #222; text-decoration: none; }
+.contact-btn { background: #f55; color: #fff; padding: 5px 15px; border-radius: 3px; }
+.banner {
+  background: #000;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+.bio-section, .skills-section, .portfolio-section, .contact-section {
+  padding: 40px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 960px;
+}
+.skills-container { display: flex; justify-content: space-between; }
+.skills-container ul { list-style: none; padding: 0; }
+.skill-bar { background: #f55; height: 6px; border-radius: 3px; margin-top: 3px; }
+.html, .english { width: 100%; background: #555; }
+.css, .kannada { width: 50%; background: #f55; }
+.java, .hindi { width: 90%; background: #555; }
+.js { width: 75%; background: #f55; }
+.angular { width: 80%; background: #f55; }
+.portfolio-cards { display: flex; gap: 30px; }
+.card { background: #fafafa; padding: 20px; border-radius: 6px; box-shadow: 0 1px 4px #0001; width: 30%; }
+.download-btn { background: #f55; color: #fff; border: none; padding: 10px 20px; border-radius: 3px; cursor: pointer; }
+.contact-section form { display: flex; flex-direction: column; gap: 10px; }
+.contact-section input, .contact-section button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.contact-section button { background: #f55; color: #fff; border: none; font-weight: bold;}
+
+.bio-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.profile-pic {
+  width: 200px;
+  min-width: 160px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px #0002;
+}
+.bio-text {
+  flex: 1;
+}
+
