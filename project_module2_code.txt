@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Example Portfolio</title>
+  <style>
+    /* === Nav bar styling and positioning === */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #282c34;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #61dafb;
+    }
+
+    /* === Styling the Home Section === */
+    #home {
+      background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    #home p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* === Styling Bio Section === */
+    #bio {
+      background-color: #f7f7f7;
+      padding: 60px 20px;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: #333;
+    }
+    #bio h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    #bio p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* === Styling Portfolio Section === */
+    #portfolio {
+      padding: 60px 40px;
+      background-color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #portfolio h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+    .portfolio-items {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+    .portfolio-item {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+    }
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .portfolio-item h3 {
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #333;
+    }
+    .portfolio-item p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* === Styling Skills Section === */
+    #skills {
+      background: #222;
+      color: #eee;
+      padding: 60px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #skills h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      font-size: 1.1rem;
+    }
+    .skill {
+      background: #444;
+      padding: 10px 20px;
+      border-radius: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+      cursor: default;
+    }
+    .skill:hover {
+      background: #61dafb;
+      color: #222;
+    }
+
+    /* === Styling Contact Section === */
+    #contact {
+      background: #f7f7f7;
+      padding: 60px 20px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+    }
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    form {
+      max-width: 450px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    input, textarea {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: #61dafb;
+      outline: none;
+    }
+    button {
+      padding: 14px 20px;
+      background-color: #282c34;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #61dafb;
+      color: #222;
+    }
+
+    /* === Styling Fonts and Individual Elements === */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+    h1, h2, h3 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+      font-weight: 700;
+    }
+    h2 {
+      font-weight: 600;
+    }
+    p {
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* === Positioning Helpers and Responsive Design === */
+    .container {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+
+    /* Flex center helpers */
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+      }
+      .skills-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>GUNTUR SURENDRA</h1>
+    <p>Welcome to my portfolio website! Explore my work and skills.</p>
+  </section>
+
+  <!-- Bio Section -->
+  <section id="bio">
+    <h2>About Me</h2>
+    <p>
+      I am a web developer with a passion for creating beautiful and functional websites. With experience in HTML, CSS, and JavaScript, I build responsive and user-friendly web applications.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container">
+    <h2>My Work</h2>
+    <div class="portfolio-items">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300x180?text=Project+One" alt="Project 1" />
+        <h3>Project One</h3>
+        <p>A responsive business website designed with modern UX principles.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300x180?text=Project+Two" alt="Project 2" />
+        <h3>Project Two</h3>
+        <p>A single-page app featuring interactive UI elements and animations.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300x180?text=Project+Three" alt="Project 3" />
+        <h3>Project Three</h3>
+        <p>An e-commerce storefront optimized for speed and usability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
